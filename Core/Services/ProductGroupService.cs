@@ -11,6 +11,7 @@ public class ProductGroupService : AsyncService<ProductGroup>, IProductGroupServ
     public new async Task<ProductGroup> GetAsync(int id, CancellationToken cancellationToken)
     {
         var item = await base.GetAsync(id, cancellationToken);
+        if (item is null) return item;
         if (item.ParentId is not null && item.Parent is null)
             item.Parent = await GetAsync(item.ParentId.Value, cancellationToken);
         return item;

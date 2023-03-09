@@ -48,7 +48,7 @@ public class Product : BaseEntity
 
     public void CalculateTax()
     {
-        Guard.Against.UnknownTax(Price, VatRate, PriceWithVat);
+        Guard.Against.UnknownVat(Price, VatRate, PriceWithVat);
 
         if (VatRate is null && Price is not null && PriceWithVat is not null)
             VatRate = (PriceWithVat- Price) * 100 / Price;
@@ -57,6 +57,6 @@ public class Product : BaseEntity
         else if (Price is null && PriceWithVat is not null && VatRate is not null)
             Price = PriceWithVat * 100/ (100 + VatRate);
 
-        Guard.Against.MissMatchTax(Price, VatRate, PriceWithVat);
+        Guard.Against.MissMatchVat(Price, VatRate, PriceWithVat);
     }
 }

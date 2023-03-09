@@ -23,8 +23,9 @@ public class ProductService : AsyncService<Product>, IProductService
     public new async Task<Product> GetAsync(int id, CancellationToken cancellationToken)
     {
         var item = await base.GetAsync(id, cancellationToken);
+        if (item is null) return item;
         item.Group ??= await _productGroupService.GetAsync(item.GroupId, cancellationToken);
-        await _storeRepository.ListAllAsync();
+        await _storeRepository.ListAsync(new ProductStoresSpecifications(item.Id), cancellationToken);
         return item;
     }
     

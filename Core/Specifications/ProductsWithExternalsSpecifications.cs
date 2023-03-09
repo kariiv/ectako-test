@@ -10,4 +10,11 @@ public class ProductsWithExternalsSpecifications : Specification<Product>
         Query.Include(p => p.Stores)
             .Include(p => p.Group);
     }
+    
+    public ProductsWithExternalsSpecifications(int[] ids)
+    {
+        Query.Where(p => ids.Contains(p.Id))
+            .Include(p => p.Stores)
+            .Include(p => p.Group);
+    }
 }

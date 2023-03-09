@@ -3,9 +3,10 @@
 ## Setup
 1. Install [net7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 2. Clone or download repository
-3. cd root folder
-4. `dotnet run --project WebApp`
-5. Open API at browser [--> Swagger <--](http://localhost:5220/swagger)
+3. Open OS based terminal (CMD/PowerShell/terminal/bash)
+4. cd repository root folder
+5. Run command: `dotnet run --project WebApp`
+6. Open API at browser [---> Swagger <---](http://localhost:5220/swagger)
 
 NB! CURRENT SETUP IS RUNNING Database InMemory 
 

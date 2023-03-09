@@ -2,8 +2,10 @@
 
 ## Setup
 1. Install [net7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
-2. `dotnet run --project WebApp`
-3. Open API at browser [--> Swagger <--](http://localhost:5220/swagger)
+2. Clone or download repository
+3. cd root folder
+4. `dotnet run --project WebApp`
+5. Open API at browser [--> Swagger <--](http://localhost:5220/swagger)
 
 
 ## For developers

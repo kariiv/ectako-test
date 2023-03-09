@@ -55,7 +55,7 @@ public class AppDbContextSeed
         {
             new ("Riivik Production"),
             new ("Go Groceries"),
-            new ("Walk a Walk Home")
+            new ("Walk a Walk a Home")
         };
     }
     static IEnumerable<Product> GetPreconfiguredProducts(Store s1, Store s2, Store s3)

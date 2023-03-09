@@ -7,6 +7,13 @@
 4. `dotnet run --project WebApp`
 5. Open API at browser [--> Swagger <--](http://localhost:5220/swagger)
 
+NB! CURRENT SETUP IS RUNNING Database InMemory 
+
+To change Database there is a need to make changes to the WebApp/Program.cs
+1. Add necessary database nuget.
+2. Add ConnectionString to the config. ∨∨∨ More info below ∨∨∨
+3. Check for migration requirements
+
 
 ## For developers
 
